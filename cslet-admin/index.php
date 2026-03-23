@@ -44,8 +44,6 @@ $year  = (int) date('Y');
 $month = (int) date('m');
 $daysInMonth = (int) date('t');
 $firstWeekday = (int) date('N', mktime(0, 0, 0, $month, 1, $year)); // 1=lun … 7=dim
-$monthLabel = strftime('%B %Y', mktime(0, 0, 0, $month, 1, $year));
-// PHP 8.1+ strftime deprecated — fallback
 $monthNames = [
     1 => 'Janvier', 2 => 'Février', 3 => 'Mars', 4 => 'Avril',
     5 => 'Mai', 6 => 'Juin', 7 => 'Juillet', 8 => 'Août',
