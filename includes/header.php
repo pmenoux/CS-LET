@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/stats.php';
 
 // Detect active page for nav highlighting
 $currentFile = basename($_SERVER['PHP_SELF']);
