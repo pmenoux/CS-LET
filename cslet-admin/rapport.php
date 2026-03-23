@@ -267,6 +267,7 @@ $periodes = [
         <li><a href="calendrier.php">Calendrier</a></li>
         <li><a href="planning.php">Plannings</a></li>
         <li><a href="rapport.php" class="active">Rapport</a></li>
+        <li><a href="guide.php">Guide</a></li>
     </ul>
     <div class="admin-nav-user">
         <span class="nav-username"><?= htmlspecialchars($user['username'], ENT_QUOTES, 'UTF-8') ?></span>
