@@ -27,11 +27,11 @@ echo "Entrées à importer : " . count($data) . "\n\n";
 
 // Mapping des noms de pictos de l'export vers nos fichiers locaux
 $pictoMap = [
-    'PICTO_Camion Faible.png'      => 'PICTO_Camion_Faible.png',
-    'PICTO_Camion Faible pous.png' => 'PICTO_Camion_Faible_pous.png',
-    'PICTO_Pelleteuse Faible.png'  => 'PICTO_Pelleteuse_Faible.png',
-    'PICTO_Pieux_Moyen.png'        => 'PICTO_Pieux_Moyen.png',
-    'PICTO_Pieux_Fort.png'         => 'PICTO_Pieux_Fort.png',
+    'PICTO_Camion Faible.webp'      => 'PICTO_Camion_Faible.webp',
+    'PICTO_Camion Faible pous.webp' => 'PICTO_Camion_Faible_pous.webp',
+    'PICTO_Pelleteuse Faible.webp'  => 'PICTO_Pelleteuse_Faible.webp',
+    'PICTO_Pieux_Moyen.webp'        => 'PICTO_Pieux_Moyen.webp',
+    'PICTO_Pieux_Fort.webp'         => 'PICTO_Pieux_Fort.webp',
 ];
 
 $db = getDB();

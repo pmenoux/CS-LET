@@ -54,32 +54,32 @@ try {
 
 // Labels lisibles
 $pictoLabels = [
-    'PICTO_Camion_Faible.png'       => 'Camion — Nuisance faible',
-    'PICTO_Camion_Faible_pous.png'  => 'Camion — Nuisance faible + poussière',
-    'PICTO_Camion_Moyen.png'        => 'Camion — Nuisance moyenne',
-    'PICTO_Camion_Moyen_pous.png'   => 'Camion — Nuisance moyenne + poussière',
-    'PICTO_Camion_Fort.png'         => 'Camion — Nuisance forte',
-    'PICTO_Camion_Fort_pous.png'    => 'Camion — Nuisance forte + poussière',
-    'PICTO_Pelleteuse_Faible.png'   => 'Pelleteuse — Nuisance faible',
-    'PICTO_Pelleteuse_Moyen.png'    => 'Pelleteuse — Nuisance moyenne',
-    'PICTO_Pelleteuse_Fort.png'     => 'Pelleteuse — Nuisance forte',
-    'PICTO_Pieux_Moyen.png'         => 'Pieux — Nuisance moyenne',
-    'PICTO_Pieux_Fort.png'          => 'Pieux — Nuisance forte',
+    'PICTO_Camion_Faible.webp'       => 'Camion — Nuisance faible',
+    'PICTO_Camion_Faible_pous.webp'  => 'Camion — Nuisance faible + poussière',
+    'PICTO_Camion_Moyen.webp'        => 'Camion — Nuisance moyenne',
+    'PICTO_Camion_Moyen_pous.webp'   => 'Camion — Nuisance moyenne + poussière',
+    'PICTO_Camion_Fort.webp'         => 'Camion — Nuisance forte',
+    'PICTO_Camion_Fort_pous.webp'    => 'Camion — Nuisance forte + poussière',
+    'PICTO_Pelleteuse_Faible.webp'   => 'Pelleteuse — Nuisance faible',
+    'PICTO_Pelleteuse_Moyen.webp'    => 'Pelleteuse — Nuisance moyenne',
+    'PICTO_Pelleteuse_Fort.webp'     => 'Pelleteuse — Nuisance forte',
+    'PICTO_Pieux_Moyen.webp'         => 'Pieux — Nuisance moyenne',
+    'PICTO_Pieux_Fort.webp'          => 'Pieux — Nuisance forte',
 ];
 
 // Niveaux de nuisance pour le scoring
 $pictoNiveaux = [
-    'PICTO_Camion_Faible.png'       => ['niveau' => 'Faible',  'score' => 1],
-    'PICTO_Camion_Faible_pous.png'  => ['niveau' => 'Faible',  'score' => 1],
-    'PICTO_Camion_Moyen.png'        => ['niveau' => 'Moyen',   'score' => 2],
-    'PICTO_Camion_Moyen_pous.png'   => ['niveau' => 'Moyen',   'score' => 2],
-    'PICTO_Camion_Fort.png'         => ['niveau' => 'Fort',    'score' => 3],
-    'PICTO_Camion_Fort_pous.png'    => ['niveau' => 'Fort',    'score' => 3],
-    'PICTO_Pelleteuse_Faible.png'   => ['niveau' => 'Faible',  'score' => 1],
-    'PICTO_Pelleteuse_Moyen.png'    => ['niveau' => 'Moyen',   'score' => 2],
-    'PICTO_Pelleteuse_Fort.png'     => ['niveau' => 'Fort',    'score' => 3],
-    'PICTO_Pieux_Moyen.png'         => ['niveau' => 'Moyen',   'score' => 2],
-    'PICTO_Pieux_Fort.png'          => ['niveau' => 'Fort',    'score' => 3],
+    'PICTO_Camion_Faible.webp'       => ['niveau' => 'Faible',  'score' => 1],
+    'PICTO_Camion_Faible_pous.webp'  => ['niveau' => 'Faible',  'score' => 1],
+    'PICTO_Camion_Moyen.webp'        => ['niveau' => 'Moyen',   'score' => 2],
+    'PICTO_Camion_Moyen_pous.webp'   => ['niveau' => 'Moyen',   'score' => 2],
+    'PICTO_Camion_Fort.webp'         => ['niveau' => 'Fort',    'score' => 3],
+    'PICTO_Camion_Fort_pous.webp'    => ['niveau' => 'Fort',    'score' => 3],
+    'PICTO_Pelleteuse_Faible.webp'   => ['niveau' => 'Faible',  'score' => 1],
+    'PICTO_Pelleteuse_Moyen.webp'    => ['niveau' => 'Moyen',   'score' => 2],
+    'PICTO_Pelleteuse_Fort.webp'     => ['niveau' => 'Fort',    'score' => 3],
+    'PICTO_Pieux_Moyen.webp'         => ['niveau' => 'Moyen',   'score' => 2],
+    'PICTO_Pieux_Fort.webp'          => ['niveau' => 'Fort',    'score' => 3],
 ];
 
 // Jours FR

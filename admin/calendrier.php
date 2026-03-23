@@ -47,32 +47,32 @@ try {
 
 // ── Liste des pictos disponibles ──────────────────────────────────────────
 $pictos = [
-    'PICTO_Camion_Faible.png',
-    'PICTO_Camion_Faible_pous.png',
-    'PICTO_Camion_Moyen.png',
-    'PICTO_Camion_Moyen_pous.png',
-    'PICTO_Camion_Fort.png',
-    'PICTO_Camion_Fort_pous.png',
-    'PICTO_Pelleteuse_Faible.png',
-    'PICTO_Pelleteuse_Moyen.png',
-    'PICTO_Pelleteuse_Fort.png',
-    'PICTO_Pieux_Moyen.png',
-    'PICTO_Pieux_Fort.png',
+    'PICTO_Camion_Faible.webp',
+    'PICTO_Camion_Faible_pous.webp',
+    'PICTO_Camion_Moyen.webp',
+    'PICTO_Camion_Moyen_pous.webp',
+    'PICTO_Camion_Fort.webp',
+    'PICTO_Camion_Fort_pous.webp',
+    'PICTO_Pelleteuse_Faible.webp',
+    'PICTO_Pelleteuse_Moyen.webp',
+    'PICTO_Pelleteuse_Fort.webp',
+    'PICTO_Pieux_Moyen.webp',
+    'PICTO_Pieux_Fort.webp',
 ];
 
 // Labels lisibles pour les pictos
 $pictoLabels = [
-    'PICTO_Camion_Faible.png'       => 'Camion Faible',
-    'PICTO_Camion_Faible_pous.png'  => 'Camion Faible + Poussiere',
-    'PICTO_Camion_Moyen.png'        => 'Camion Moyen',
-    'PICTO_Camion_Moyen_pous.png'   => 'Camion Moyen + Poussiere',
-    'PICTO_Camion_Fort.png'         => 'Camion Fort',
-    'PICTO_Camion_Fort_pous.png'    => 'Camion Fort + Poussiere',
-    'PICTO_Pelleteuse_Faible.png'   => 'Pelleteuse Faible',
-    'PICTO_Pelleteuse_Moyen.png'    => 'Pelleteuse Moyen',
-    'PICTO_Pelleteuse_Fort.png'     => 'Pelleteuse Fort',
-    'PICTO_Pieux_Moyen.png'         => 'Pieux Moyen',
-    'PICTO_Pieux_Fort.png'          => 'Pieux Fort',
+    'PICTO_Camion_Faible.webp'       => 'Camion Faible',
+    'PICTO_Camion_Faible_pous.webp'  => 'Camion Faible + Poussiere',
+    'PICTO_Camion_Moyen.webp'        => 'Camion Moyen',
+    'PICTO_Camion_Moyen_pous.webp'   => 'Camion Moyen + Poussiere',
+    'PICTO_Camion_Fort.webp'         => 'Camion Fort',
+    'PICTO_Camion_Fort_pous.webp'    => 'Camion Fort + Poussiere',
+    'PICTO_Pelleteuse_Faible.webp'   => 'Pelleteuse Faible',
+    'PICTO_Pelleteuse_Moyen.webp'    => 'Pelleteuse Moyen',
+    'PICTO_Pelleteuse_Fort.webp'     => 'Pelleteuse Fort',
+    'PICTO_Pieux_Moyen.webp'         => 'Pieux Moyen',
+    'PICTO_Pieux_Fort.webp'          => 'Pieux Fort',
 ];
 
 $csrfToken  = csrf_token();

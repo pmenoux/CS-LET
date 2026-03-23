@@ -45,18 +45,18 @@ $startDow  = (int)date('N', $firstDay);  // 1=Mon, 7=Sun
 // key = filename stored in DB / assets/img/
 $pictoLib = [
     // In-use pictos (shown in legend + calendar)
-    'PICTO_Camion_Faible.png'       => ['label' => 'Camion — Nuisance faible',             'inuse' => true],
-    'PICTO_Camion_Faible_pous.png'  => ['label' => 'Camion — Nuisance faible + poussière', 'inuse' => true],
-    'PICTO_Pelleteuse_Faible.png'   => ['label' => 'Pelleteuse — Nuisance faible',         'inuse' => true],
-    'PICTO_Pieux_Moyen.png'         => ['label' => 'Pieux — Nuisance moyenne',             'inuse' => true],
-    'PICTO_Pieux_Fort.png'          => ['label' => 'Pieux — Nuisance forte',               'inuse' => true],
+    'PICTO_Camion_Faible.webp'       => ['label' => 'Camion — Nuisance faible',             'inuse' => true],
+    'PICTO_Camion_Faible_pous.webp'  => ['label' => 'Camion — Nuisance faible + poussière', 'inuse' => true],
+    'PICTO_Pelleteuse_Faible.webp'   => ['label' => 'Pelleteuse — Nuisance faible',         'inuse' => true],
+    'PICTO_Pieux_Moyen.webp'         => ['label' => 'Pieux — Nuisance moyenne',             'inuse' => true],
+    'PICTO_Pieux_Fort.webp'          => ['label' => 'Pieux — Nuisance forte',               'inuse' => true],
     // Library pictos (future use)
-    'PICTO_Camion_Fort.png'         => ['label' => 'Camion — Nuisance forte',              'inuse' => false],
-    'PICTO_Camion_Moyen.png'        => ['label' => 'Camion — Nuisance moyenne',            'inuse' => false],
-    'PICTO_Camion_Moyen_pous.png'   => ['label' => 'Camion — Nuisance moyenne + poussière','inuse' => false],
-    'PICTO_Pelleteuse_Moyen.png'    => ['label' => 'Pelleteuse — Nuisance moyenne',        'inuse' => false],
-    'PICTO_Pelleteuse_Fort.png'     => ['label' => 'Pelleteuse — Nuisance forte',          'inuse' => false],
-    'PICTO_Camion_Fort_pous.png'    => ['label' => 'Camion — Nuisance forte + poussière',  'inuse' => false],
+    'PICTO_Camion_Fort.webp'         => ['label' => 'Camion — Nuisance forte',              'inuse' => false],
+    'PICTO_Camion_Moyen.webp'        => ['label' => 'Camion — Nuisance moyenne',            'inuse' => false],
+    'PICTO_Camion_Moyen_pous.webp'   => ['label' => 'Camion — Nuisance moyenne + poussière','inuse' => false],
+    'PICTO_Pelleteuse_Moyen.webp'    => ['label' => 'Pelleteuse — Nuisance moyenne',        'inuse' => false],
+    'PICTO_Pelleteuse_Fort.webp'     => ['label' => 'Pelleteuse — Nuisance forte',          'inuse' => false],
+    'PICTO_Camion_Fort_pous.webp'    => ['label' => 'Camion — Nuisance forte + poussière',  'inuse' => false],
 ];
 
 // ─── Query DB ────────────────────────────────────────────────────────────────

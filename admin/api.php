@@ -52,17 +52,17 @@ if ($method === 'GET') {
 
 // Liste des pictos autorisés (whitelist)
 $allowedPictos = [
-    'PICTO_Camion_Faible.png',
-    'PICTO_Camion_Faible_pous.png',
-    'PICTO_Camion_Moyen.png',
-    'PICTO_Camion_Moyen_pous.png',
-    'PICTO_Camion_Fort.png',
-    'PICTO_Camion_Fort_pous.png',
-    'PICTO_Pelleteuse_Faible.png',
-    'PICTO_Pelleteuse_Moyen.png',
-    'PICTO_Pelleteuse_Fort.png',
-    'PICTO_Pieux_Moyen.png',
-    'PICTO_Pieux_Fort.png',
+    'PICTO_Camion_Faible.webp',
+    'PICTO_Camion_Faible_pous.webp',
+    'PICTO_Camion_Moyen.webp',
+    'PICTO_Camion_Moyen_pous.webp',
+    'PICTO_Camion_Fort.webp',
+    'PICTO_Camion_Fort_pous.webp',
+    'PICTO_Pelleteuse_Faible.webp',
+    'PICTO_Pelleteuse_Moyen.webp',
+    'PICTO_Pelleteuse_Fort.webp',
+    'PICTO_Pieux_Moyen.webp',
+    'PICTO_Pieux_Fort.webp',
 ];
 
 /**
