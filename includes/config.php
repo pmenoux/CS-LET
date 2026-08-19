@@ -6,6 +6,9 @@ define('DB_PASS', 'dq24S9cuJl5T6GZj6x');
 define('SITE_NAME', 'LET - Campus Sante - Dorigny');
 define('SITE_URL', 'https://cs-let.ch');
 define('BASE_PATH', '/');
+// Chemin disque de la racine du site (pour file_exists / is_dir / scandir).
+// Ne pas confondre avec BASE_PATH qui est un chemin URL.
+define('ROOT_PATH', dirname(__DIR__));
 define('ASSETS_PATH', '/assets');
 define('DB_CHARSET', 'utf8mb4');
 date_default_timezone_set('Europe/Zurich');

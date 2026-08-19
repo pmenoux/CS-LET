@@ -187,7 +187,7 @@ require_once __DIR__ . '/includes/header.php';
                 <ul class="cal-legend__list">
                     <?php foreach ($pictoLib as $file => $info):
                         if (!$info['inuse']) continue;
-                        $imgPath = BASE_PATH . '/assets/img/' . $file;
+                        $imgPath = ROOT_PATH . '/assets/img/' . $file;
                     ?>
                     <li class="cal-legend__item">
                         <?php if (file_exists($imgPath)): ?>
@@ -208,7 +208,7 @@ require_once __DIR__ . '/includes/header.php';
                 <ul class="cal-legend__list">
                     <?php foreach ($pictoLib as $file => $info):
                         if ($info['inuse']) continue;
-                        $imgPath = BASE_PATH . '/assets/img/' . $file;
+                        $imgPath = ROOT_PATH . '/assets/img/' . $file;
                     ?>
                     <li class="cal-legend__item cal-legend__item--future">
                         <?php if (file_exists($imgPath)): ?>

@@ -3,7 +3,7 @@ $pageTitle = 'Informations';
 require_once __DIR__ . '/includes/config.php';
 
 // ─── Find latest uploaded planning files ────────────────────────────────────
-$uploadsDir   = BASE_PATH . '/uploads/planning/';
+$uploadsDir   = ROOT_PATH . '/uploads/planning/';
 $latestImage  = null;
 $latestPdf    = null;
 
@@ -75,7 +75,7 @@ require_once __DIR__ . '/includes/header.php';
             <h2 class="content-title">Schéma des palplanches</h2>
             <?php
             $schemaPath = 'assets/img/schema_palplanches.png';
-            if (file_exists(BASE_PATH . '/' . $schemaPath)):
+            if (file_exists(ROOT_PATH . '/' . $schemaPath)):
             ?>
                 <figure class="planning-figure">
                     <img src="<?= htmlspecialchars($schemaPath) ?>"
