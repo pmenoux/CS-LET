@@ -521,6 +521,9 @@ a:hover { text-decoration: underline; }
 .cal-cell-day.is-weekend {
     background: #fafafa;
 }
+.cal-cell-day.is-weekend:not(.has-entry) {
+    cursor: not-allowed;
+}
 .cal-cell-day.is-loading {
     opacity: 0.5;
     pointer-events: none;

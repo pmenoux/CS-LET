@@ -257,12 +257,22 @@ function initCalendarCells() {
     const grid = document.getElementById('cal-grid');
     if (!grid) return;
 
+    // Un samedi ou un dimanche ne recoit pas de nuisance ; une entree ancienne
+    // reste ouvrable pour pouvoir la supprimer.
+    function openCell(cell) {
+        const dateStr      = cell.dataset.date;
+        const currentPicto = cell.dataset.picto || null;
+        if (cell.classList.contains('is-weekend') && !currentPicto) {
+            showNotif('Pas de nuisance le samedi ni le dimanche.', 'error');
+            return;
+        }
+        modal.open(dateStr, currentPicto);
+    }
+
     grid.addEventListener('click', e => {
         const cell = e.target.closest('.cal-cell-day');
         if (!cell) return;
-        const dateStr     = cell.dataset.date;
-        const currentPicto = cell.dataset.picto || null;
-        modal.open(dateStr, currentPicto);
+        openCell(cell);
     });
 
     grid.addEventListener('keydown', e => {
@@ -270,9 +280,7 @@ function initCalendarCells() {
             const cell = e.target.closest('.cal-cell-day');
             if (!cell) return;
             e.preventDefault();
-            const dateStr      = cell.dataset.date;
-            const currentPicto = cell.dataset.picto || null;
-            modal.open(dateStr, currentPicto);
+            openCell(cell);
         }
     });
 }
@@ -354,13 +362,17 @@ function initBulkMode() {
             });
 
             if (result.success) {
-                // Mettre à jour toutes les cellules de la plage
-                const current = new Date(start + 'T00:00:00');
-                const last    = new Date(end   + 'T00:00:00');
+                // Mettre à jour les cellules de la plage, sauf samedi et dimanche
+                // (ignores par le serveur). Date en UTC : toISOString() sur une
+                // date locale recule d'un jour en Suisse.
+                const current = new Date(start + 'T00:00:00Z');
+                const last    = new Date(end   + 'T00:00:00Z');
                 while (current <= last) {
-                    const ds = current.toISOString().slice(0, 10);
-                    updateCell(ds, state.bulkPicto);
-                    current.setDate(current.getDate() + 1);
+                    const wd = current.getUTCDay();
+                    if (wd !== 0 && wd !== 6) {
+                        updateCell(current.toISOString().slice(0, 10), state.bulkPicto);
+                    }
+                    current.setUTCDate(current.getUTCDate() + 1);
                 }
                 showNotif(result.message || `${result.count} entrees enregistrees.`, 'success');
                 // Reset

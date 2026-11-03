@@ -75,6 +75,15 @@ function validateDate(string $date): bool
     return checkdate((int)$m, (int)$d, (int)$y);
 }
 
+/**
+ * Samedi ou dimanche : le chantier ne produit pas de nuisance le week-end
+ * (decision Pierre du 03.11.2026). Date deja validee par validateDate().
+ */
+function isWeekend(string $date): bool
+{
+    return (int)(new DateTime($date))->format('N') >= 6;
+}
+
 // ── Routeur ────────────────────────────────────────────────────────────────
 
 try {
@@ -115,6 +124,11 @@ try {
             if (!validateDate($date)) {
                 http_response_code(400);
                 echo json_encode(['success' => false, 'error' => 'Date invalide.']);
+                exit;
+            }
+            if (isWeekend($date)) {
+                http_response_code(400);
+                echo json_encode(['success' => false, 'error' => 'Pas de nuisance le samedi ni le dimanche.']);
                 exit;
             }
             if (!in_array($picto, $allowedPictos, true)) {
@@ -197,20 +211,29 @@ try {
                  ON DUPLICATE KEY UPDATE picto = VALUES(picto), updated_at = NOW()'
             );
 
+            // Les samedis et dimanches de la plage sont ignores, pas refuses :
+            // une plage « du lundi au vendredi suivant » reste valable.
             $db->beginTransaction();
             $count   = 0;
+            $skipped = 0;
             $current = clone $start;
             while ($current <= $end) {
-                $stmt->execute([$current->format('Y-m-d'), $picto]);
-                $count++;
+                if ((int)$current->format('N') >= 6) {
+                    $skipped++;
+                } else {
+                    $stmt->execute([$current->format('Y-m-d'), $picto]);
+                    $count++;
+                }
                 $current->modify('+1 day');
             }
             $db->commit();
 
             echo json_encode([
                 'success' => true,
-                'message' => $count . ' entrees enregistrees.',
+                'message' => $count . ' entrees enregistrees'
+                           . ($skipped ? ' (' . $skipped . ' jours de week-end ignores).' : '.'),
                 'count'   => $count,
+                'skipped' => $skipped,
             ]);
             break;
 
